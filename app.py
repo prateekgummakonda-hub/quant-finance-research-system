@@ -118,7 +118,22 @@ with col1:
 
 with col2:
     st.metric("ML Strategy Total Return", f"{total_return_strategy:.2%}")
+# -----------------------------
+# Next-day prediction
+# -----------------------------
+st.subheader("Next Trading Day Prediction")
 
+latest_features = X.iloc[[-1]]
+latest_prob = model.predict_proba(latest_features)[0][1]
+latest_pred = model.predict(latest_features)[0]
+
+if latest_pred == 1:
+    direction = "UP"
+else:
+    direction = "DOWN"
+
+st.metric("Predicted Direction", direction)
+st.metric("Confidence", f"{latest_prob:.2%}")
 # -----------------------------
 # Show prediction table
 # -----------------------------
