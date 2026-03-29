@@ -13,7 +13,14 @@ st.title("📈 Quant Finance Dashboard")
 # Sidebar
 # -----------------------------
 st.sidebar.header("Settings")
-ticker = st.sidebar.selectbox("Select a stock", ["SPY", "AAPL", "TSLA", "NVDA"])
+ticker = st.sidebar.selectbox(
+    "Select a stock",
+    [
+        "SPY", "AAPL", "TSLA", "NVDA",
+        "MSFT", "GOOGL", "AMZN",
+        "META", "NFLX", "AMD", "INTC"
+    ]
+)
 start_date = st.sidebar.date_input("Start date", pd.to_datetime("2020-01-01"))
 
 # -----------------------------
