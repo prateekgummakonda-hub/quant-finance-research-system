@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 st.set_page_config(page_title="Quant Finance Dashboard", layout="wide")
 
-st.title("Quant Finance Dashboard", layout = "centered")
+st.title("Quant Finance Dashboard", text_alignment="center")
 
 # -----------------------------
 # Sidebar
