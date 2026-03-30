@@ -5,9 +5,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 
-st.set_page_config(page_title="Quant Finance Dashboard", layout="centered")
+st.set_page_config(page_title="Quant Finance Dashboard", layout="wide")
 
-st.title("Quant Finance Dashboard")
+st.title("Quant Finance Dashboard", layout = "centered")
 
 # -----------------------------
 # Sidebar
